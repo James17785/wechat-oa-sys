@@ -135,25 +135,46 @@ git log --graph --pretty=oneline --abbrev-commit
 18.查看远程库信息，使用git remote -v；
 
 本地新建的分支如果不推送到远程，对其他人就是不可见的；
-
 从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
-
 在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
-
 建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
-
 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
 
+19.rebase操作可以把本地未push的分叉提交历史整理成直线；
 
+rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
 
+20.标签
+命令git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+命令git tag -a <tagname> -m "blablabla..."可以指定标签信息, 用-a指定标签名，-m指定说明文字
+命令git tag可以查看所有标签。
+用命令git show <tagname>可以看到说明文字.
 
+命令git push origin <tagname>可以推送一个本地标签；
+命令git push origin --tags可以推送全部未推送过的本地标签；
+命令git tag -d <tagname>可以删除一个本地标签；
+命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
 
+21.使用GitHub
+在GitHub上，可以任意Fork开源仓库；
+自己拥有Fork后的仓库的读写权限；
+可以推送pull request给官方仓库来贡献代码。
 
+22.自定义Git
+让Git显示颜色: git config --global color.ui true
 
+在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。
+git check-ignore -v App.class
+.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理！
 
+命令可以简写
+git config --global alias.ci commit ==>ci
 
+配置Git的时候，加上--global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。
+配置文件放哪了？每个仓库的Git配置文件都放在.git/config文件中.
+别名就在[alias]后面，要删除别名，直接把对应的行删掉即可。
 
-
+23.搭建一台Git服务器
 
 
 

@@ -53,12 +53,20 @@ export default class HelloWorldApp extends Component {
 第四句：提供视图的样式，那么StyleSheet.create
 第五句：style={styles.container}
 第六句：注册应用入口，这个一定不能少，否则模拟器会提示报错：
-    AppRegistry.registerComponent('HelloWorld', () =&gt; HelloWorld);
+    AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
 
 3. 我们使用两种数据来控制一个组件：props和state。props是在父组件中指定，而且一经指定，在被指定的组件的生命周期中则不再改变。 对于需要改变的数据，我们需要使用state。
 
+4. 使用Flexbox布局
+flexDirection: 主轴布局，默认是 column
+justifyContent: 可以决定其子元素沿着主轴的排列方式, 对应的这些可选项有：flex-start、center、flex-end、space-around以及space-between
+alignItems: 子元素沿着次轴的排列方式， 对应的这些可选项有：flex-start、center、flex-end以及stretch。
 
+5. 处理文本输入
+TextInput是一个允许用户输入文本的基础组件。它有一个名为onChangeText的属性，此属性接受一个函数，而此函数会在文本变化时被调用
+另外还有一个名为onSubmitEditing的属性，会在文本被提交后（用户按下软键盘上的提交键）调用。
 
+6. 如何使用滚动视图
 
 
 

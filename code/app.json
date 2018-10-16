@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/register/register",
+    "pages/leave/leave",
+    "pages/overTime/overTime",
+    "pages/addOverTime/addOverTime",
+    "pages/modifyAddre/modifyAddre",
+    "pages/addLeave/addLeave",
+    "pages/modifyLeave/modifyLeave"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "中软OA",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1afa29",
+    "list": [
+      {
+        "pagePath": "pages/overTime/overTime",
+        "text": "加班",
+        "currentTab":0,
+        "iconPath": "image/overTime.png",
+        "selectedIconPath": "image/overTimeSelected.png"
+      },
+      {
+        "pagePath": "pages/leave/leave",
+        "text": "请假",
+        "currentTab": 1,
+        "iconPath": "image/leave.png",
+        "selectedIconPath": "image/leaveSelected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "currentTab": 2,
+        "iconPath": "image/me.png",
+        "selectedIconPath": "image/meSelected.png"
+      }
+    ]
+  },
+  "debug": false
+}

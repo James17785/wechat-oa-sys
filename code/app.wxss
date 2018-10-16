@@ -1,0 +1,31 @@
+
+.container {
+  height: 100%;
+  display: flex;
+  padding: 0 20rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+}
+
+
+.section {
+  margin: 16rpx 0;
+  height: 90rpx;
+  
+}
+
+.section-title {
+}
+
+.input-placeholder {
+}
+
+.section-body {
+  flex: 1;
+  border-bottom: 1rpx solid #8a8a8a;
+  
+}

@@ -1,0 +1,58 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.chinasoftiBackgroundImage {
+  width: 100%;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.chinasoftiInformation {
+  width: 100%;
+}
+
+.update-button {
+  padding: 0;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 48rpx;
+  right: 48rpx;
+  z-index: 100;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  margin: 16rpx 0;
+}
+
+.section-title {
+  width: 200rpx;
+}
+
+.section-body {
+  flex-direction: column;
+  flex: 1;
+}
+
+.update-button-bottom {
+  margin: 48rpx 0;
+}

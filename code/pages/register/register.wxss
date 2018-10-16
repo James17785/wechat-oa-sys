@@ -1,0 +1,7 @@
+.regitster {
+  width: 100%;
+}
+
+.register-button {
+  margin: 48rpx 0;
+}

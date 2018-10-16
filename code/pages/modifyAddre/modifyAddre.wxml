@@ -1,0 +1,48 @@
+<!-- 信息部分开始 -->
+<form bindsubmit="formSubmit" report-submit="true">
+<view class = "info">
+<!-- 加班项目 -->
+<view class = "item">
+<text>加班项目</text>
+<view class = "right">
+<input type="text" value="{{bill_project}}" name = "bill_project" placeholder="{{bill_project}}" focus="{{focus}}"/>
+</view>
+</view>
+
+<!-- 加班日期 -->
+<view class = "item">
+<text>加班日期</text>
+<view class = "right">
+<picker name="ot_date" mode="date" value="{{dates}}" start="1978-01-01" end="2025-1-23" bindchange="bindDateChange">  
+      {{dates}}  
+  </picker> 
+</view>
+</view>
+
+
+<!-- 详细地址部分 -->
+<view class = "item">
+<text>加班时间</text>
+<view class = "right">
+<input name="ot_duration" value="{{ot_duration}}" type="digit" placeholder="{{ot_duration}}"  focus="{{focus}}"/>
+<picker bindchange="bindPickerChange" value="{{areaIndex}}" range="{{area}}">  
+    <view class="picker">  
+      {{area[areaIndex]}}  
+    </view>  
+</picker> 
+</view>
+</view>
+
+<!-- 加班原因 -->
+<view class = "item">
+<text>加班原因</text>
+<view class = "right">
+<input name="ot_reason" value="{{ot_reason}}" type="text" placeholder="{{ot_reason}}"  focus="{{focus}}"/>
+</view>
+</view>
+</view>
+<!-- 信息部分结束 -->
+<button class = "save" formType="submit" >修改</button>
+<button class = "delete" bindtap = "delete">删除该记录</button>
+<button class = "delete" bindtap = "cancel">取消</button>
+</form>

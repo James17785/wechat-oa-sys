@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="regitster">
+  <modal class="modal" hidden="{{modalFlag}}" no-cancel bindconfirm="modalOk" confirmText="我知道了">  
+    <view class="dew">  
+      <view class="vedw">请在登录页授权后操作</view>  
+      <view class="po_w">  
+      </view>   
+</view>  
+</modal> 
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section-title">中文名：</view>
+        <view class='section-body'>{{name_chinese}}</view>
+      </view>
+      <view class="section">
+        <view class="section-title">英文名：</view>
+       <view class='section-body'>{{name_english}}</view>
+      </view>
+      <view class="section">
+        <view class="section-title">Staff ID：</view>
+       <view class='section-body'>{{staffId}}</view>
+       <input hidden="true" name="staffId" value="{{staffId}}"/>
+      </view>
+       <view class="section">
+        <view class="section-title">RM邮箱：</view>
+       <view class='section-body'>{{rm_email}}</view>
+      </view>
+       <view class="section">
+        <view class="section-title">HM邮箱：</view>
+       <view class='section-body'>{{hsbc_mgr_email}}</view>
+      </view>
+      <!--1111-->
+      <view class = "item"  wx:for="{{list}}"  wx:key="key" data-index="{{item.index}}" data-leave_type="{{item.leave_type}}" leave_start_data="{{item.leave_start_data}}" leave_end_data="{{item.leave_end_data}}" data-leave_duration="{{item.leave_duration}}" data-leave_backup="{{item.leave_backup}}">
+<view class = "info">
+<text>休假类型：{{item.leave_type}}，开始日期：{{item.leave_start_data}}，结束日期：{{item.leave_end_data}}，休假时长{{item.leave_duration}}h</text>
+<text  >BackUp：{{item.leave_backup}}</text>
+</view>
+<view class = "modify" bindtap="toModifyAddre" data-index="{{item.index}}" data-bill_project="{{item.bill_project}}" data-ot_date="{{item.ot_date}}" data-ot_duration="{{item.ot_duration}}" data-ot_reasons="{{item.ot_reasons}}">
+<image src = "../../image/modify.png"
+    mode = "widthFix" bindtap = "detete"/>
+</view>
+</view>
+ <!--111--> 
+<view class = "add" bindtap = "addAddre">  
+    <image  class = "left" src = "../../image/6.png" 
+    mode = "widthFix" /><view class = "text">新增个人请假信息</view>  
+    <image class="right" src = "../../image/right.png"  
+    mode = "widthFix" />  
+</view>  
+      <view class="error">{{tip}}</view>
+      <button formType="submit" type='primary' class='register-button' disabled="{{disabled}}" loading="{{loginLoading}}"> 提交</button>  
+    </form>
+  </view>
+</view>

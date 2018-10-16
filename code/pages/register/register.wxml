@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="regitster">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="section-title">中文名：</view>
+        <input class="section-body" name="name_chinese" placeholder="输入你的中文名" value="{{chinasoftiInfo.name_chinese}}" />
+      </view>
+      <view class="section">
+        <view class="section-title">英文名：</view>
+        <input class="section-body" name="name_english" placeholder="输入你的英文名" value="{{chinasoftiInfo.name_english}}" />
+      </view>
+      <view class="section">
+        <view class="section-title">Staff ID：</view>
+        <input class="section-body" name="staffId" placeholder="输入你的HSBC Staff ID" value="{{chinasoftiInfo.staffId}}" />
+      </view>
+      <view class="section">
+        <view class="section-title">EHR编号：</view>
+        <input class="section-body" name="ehr" placeholder="输入你的EHR编号" value="{{chinasoftiInfo.ehr}}" />
+      </view>
+      <view class="section">
+        <view class="section-title">lob：</view>
+        <input class="section-body" name="lob" placeholder="输入你的lob" value="{{chinasoftiInfo.lob}}" />
+      </view>
+      <view class="section">
+        <view class="section-title">手机号：</view>
+        <input class="section-body" name="phone" type="number" placeholder="输入你的机号" value="{{chinasoftiInfo.phone}}" />
+      </view>
+      <view class="section">
+        <view class="section-title">邮箱：</view>
+        <input class="section-body" name="email" placeholder="输入你的邮箱" value="{{chinasoftiInfo.email}}" />
+      </view>
+      <view class="section">
+        <view class="section-title">中软RM邮箱：</view>
+        <input class="section-body" name="rm_email" placeholder="输入你的RM邮箱" value="{{chinasoftiInfo.rm_email}}" />
+      </view>
+      <view class="section">
+        <view class="section-title">HSBC Manager（HM）邮箱：</view>
+        <input class="section-body" name="hsbc_mgr_email" placeholder="输入你的HSBC Manager邮箱" value="{{chinasoftiInfo.hsbc_mgr_email}}" />
+      </view>
+      <button class="register-button" formType="submit" type="primary" bindtap="primary"> {{registerOrUpdate}} </button>
+    </form>
+  </view>
+</view>

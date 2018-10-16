@@ -1,0 +1,63 @@
+<!--pages/addLeave/addLeave.wxml-->
+<!-- 信息部分开始 -->
+<form bindsubmit="formSubmit" report-submit="true">
+<view class = "info">
+<!-- 休假类型 -->
+<view class = "item">
+<text>休假类型</text>
+<view class = "right">
+<input type="text" name = "leave_type" placeholder="{{leave_type}}" focus="{{focus}}"/>
+</view>
+</view>
+
+<!-- 请假开始日期 -->
+<view class = "item">
+<text>开始时间</text>
+<view class = "right">
+ <picker name="leave_s_date" mode="date" value="{{startDates}}" start="1978-01-01" end="2025-1-23" bindchange="bindStartDateChange">  
+      {{startDates}}  
+  </picker>  
+<picker name="leave_s_time" mode="time" value="{{startTimes}}" start="09:00" end="18:30" bindchange="bindStartTimeChange" style="padding-left:20rpx;">
+      {{startTimes}}  
+  </picker> 
+</view>
+</view>
+
+<!-- 请假结束日期 -->
+<view class = "item">
+<text>结束时间</text>
+<view class = "right">
+ <picker name="leave_e_date" mode="date" value="{{endDates}}" start="1978-01-01" end="2025-1-23" bindchange="bindEndDateChange">  
+      {{endDates}}  
+  </picker>  
+<picker name="leave_e_time" mode="time" value="{{endTimes}}" start="09:00" end="18:30" bindchange="bindEndTimeChange" style="padding-left:20rpx;">  
+      {{endTimes}}  
+  </picker> 
+</view>
+</view>
+
+<!-- 详细地址部分 -->
+<view class = "item">
+<text>请假时长</text>
+<view class = "right">
+<input name="leave_duration" type="number" placeholder="{{leave_duration}}"  focus="{{focus}}"/>
+<picker bindchange="bindPickerChange" value="{{areaIndex}}" range="{{area}}">  
+    <view class="picker">  
+      {{area[areaIndex]}}  
+    </view>  
+</picker> 
+</view>
+</view>
+
+<!-- backup -->
+<view class = "item">
+<text>BackUp</text>
+<view class = "right">
+<input name="leave_backup" type="text" placeholder="{{leave_backup}}"  focus="{{focus}}"/>
+</view>
+</view>
+</view>
+<!-- 信息部分结束 -->
+<button class = "save" formType="submit" >保存</button>
+</form>
+

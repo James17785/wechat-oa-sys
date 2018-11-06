@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="userinfo">
+    <image class="chinasoftiBackgroundImage" src="{{ imagePath + 'index-bg.jpg'}}" mode="aspectFit"></image>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 开始使用 </button>
+    <block wx:else>
+      <view class="chinasoftiInformation">
+        <form class="chinasoftiInfoForm">
+          <view class="section">
+            <view class="section-title">中文名：</view>
+            <input class="section-body" disabled="{{formDisabled}}" bindinput="bindKeyInput" value="{{chinasoftiInfo.name_chinese}}" />
+          </view>
+          <view class="section">
+            <view class="section-title">英文名：</view>
+            <input class="section-body" disabled="{{formDisabled}}" bindinput="bindKeyInput" value="{{chinasoftiInfo.name_english}}" />
+          </view>
+          <view class="section">
+            <view class="section-title">Staff ID：</view>
+            <input class="section-body" disabled="{{formDisabled}}" bindinput="bindKeyInput" value="{{chinasoftiInfo.staffId}}" />
+          </view>
+          <view class="section">
+            <view class="section-title">EHR编号：</view>
+            <input class="section-body" disabled="{{formDisabled}}" bindinput="bindKeyInput" value="{{chinasoftiInfo.ehr}}" />
+          </view>
+          <view class="section">
+            <view class="section-title">手机号：</view>
+            <input class="section-body" disabled="{{formDisabled}}" bindinput="bindKeyInput" value="{{chinasoftiInfo.phone}}" />
+          </view>
+          <view class="section">
+            <view class="section-title">邮箱：</view>
+            <input class="section-body" disabled="{{formDisabled}}" bindinput="bindKeyInput" value="{{chinasoftiInfo.email}}" />
+          </view>
+          <view class="section">
+            <view class="section-title">RM邮箱：</view>
+            <input class="section-body" disabled="{{formDisabled}}" bindinput="bindKeyInput" value="{{chinasoftiInfo.rm_email}}" />
+          </view>
+
+          <button class="update-button" type="primary" bindtap="navigateToRegister"> 注册 </button>
+          <button class="update-button-bottom" type="primary" disabled="{{!formDisabled}}" bindtap="updatMyInfo"> 更新我的信息 </button>
+        </form>
+      </view>
+    </block>
+  </view>
+</view>

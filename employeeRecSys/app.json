@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/register/register",
+    "pages/recommend/recommend",
+    "pages/modifyAddre/modifyAddre",
+    "pages/addRecommend/addRecommend",
+    "pages/modifyRecommend/modifyRecommend"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "推荐系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1afa29",
+    "list": [
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐",
+        "currentTab": 1,
+        "iconPath": "image/leave.png",
+        "selectedIconPath": "image/leaveSelected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "currentTab": 2,
+        "iconPath": "image/me.png",
+        "selectedIconPath": "image/meSelected.png"
+      }
+    ]
+  },
+  "debug": false
+}

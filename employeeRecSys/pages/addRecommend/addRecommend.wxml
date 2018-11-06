@@ -1,0 +1,53 @@
+
+<!-- 信息部分开始 -->
+<form bindsubmit="formSubmit" report-submit="true">
+<view class = "info">
+<!-- 姓名 -->
+<view class = "item">
+<text>姓名</text>
+<view class = "right">
+<input type="text" name = "employee_name" placeholder="{{employee_name}}" focus="{{focus}}"/>
+</view>
+</view>
+
+<!-- 级别 -->
+<view class = "item">
+<text>级别</text>
+<view class = "right">
+<input type="text" name = "employee_level" placeholder="{{employee_level}}" focus="{{focus}}"/>
+</view>
+</view>
+
+<!-- 技术方向 -->
+<view class = "item">
+<text>技术方向</text>
+<view class = "right">
+<input type="text" name = "employee_techy" placeholder="{{employee_techy}}" focus="{{focus}}"/>
+</view>
+</view>
+
+<!-- 工作年限 -->
+<view class = "item">
+<text>工作年限</text>
+<view class = "right">
+<input name="employee_duration" type="number" placeholder="{{employee_duration}}"  focus="{{focus}}"/>
+<picker bindchange="bindPickerChange" value="{{areaIndex}}" range="{{area}}">  
+    <view class="picker">  
+      {{area[areaIndex]}}  
+    </view>  
+</picker> 
+</view>
+</view>
+
+<!-- 电话 -->
+<view class = "item">
+<text>电话</text>
+<view class = "right">
+<input name="employee_phone" type="text" placeholder="{{employee_phone}}"  focus="{{focus}}"/>
+</view>
+</view>
+</view>
+<!-- 信息部分结束 -->
+<button class = "save" formType="submit" >保存</button>
+</form>
+
